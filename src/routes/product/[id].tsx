@@ -1,4 +1,4 @@
-import { RouteSectionProps, useParams, useSearchParams } from "@solidjs/router";
+import { RouteSectionProps, useSearchParams } from "@solidjs/router";
 import Counter from "~/components/Counter";
 
 export default function Product(props: RouteSectionProps) {
