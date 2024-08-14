@@ -1,8 +1,13 @@
-import { RouteSectionProps, useSearchParams } from "@solidjs/router";
+import {
+  RouteSectionProps,
+  useLocation,
+  useSearchParams,
+} from "@solidjs/router";
 import Counter from "~/components/Counter";
 
 export default function Product(props: RouteSectionProps) {
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
   return (
     <div>
       <h1>Product {props.params.id}</h1>
@@ -32,6 +37,8 @@ export default function Product(props: RouteSectionProps) {
       >
         Sort by relevance
       </button>
+
+      <pre data-test="location">Location: {location.pathname}</pre>
     </div>
   );
 }
